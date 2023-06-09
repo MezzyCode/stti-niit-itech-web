@@ -1,5 +1,10 @@
 import './globals.css';
+import { Nunito_Sans } from 'next/font/google'
 import Navigation from './components/Navigation';
+
+const nunito_sans = Nunito_Sans({
+  subsets: ['latin']
+})
 
 export const metadata = {
   title: 'I-Tech',
@@ -9,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body>
+      <body className={nunito_sans.className}>
         <Navigation></Navigation>
         {children}
       </body>

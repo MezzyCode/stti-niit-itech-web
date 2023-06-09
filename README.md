@@ -2,16 +2,16 @@
 
 ## Prasyarat
 
-Untuk menjalankan versi project Anda sendiri, Anda harus memiliki yang berikut ini di komputer Anda:
+Untuk menjalankan versi proyek Anda sendiri, Anda harus memiliki yang berikut ini di komputer Anda:
 
-* [Node.js](https://nodejs.org/en) untuk menjalankan project
-* [NPM](https://docs.npmjs.com/getting-started) untuk mengontrol dependency, biasanya dipasang satu paket dengan Node.js
+* [Node.js](https://nodejs.org/en) untuk menjalankan proyek
+* [NPM](https://docs.npmjs.com/getting-started) untuk mengontrol dependensi proyek, biasanya dipasang satu paket dengan Node.js
 
-## Dependencies
+## Dependensi
 
-Sebagian besar dependensi terkait dengan aplikasi dikelola secara otomatis oleh NPM, dan akan diinstal secara otomatis saat Anda mencoba menjalankan proyek. Kami akan membahas dependensi tersebut di bagian berikut
+Sebagian besar dependensi yang terkait dengan proyek ini dikelola oleh NPM, dan akan diinstal secara otomatis saat Anda mencoba menjalankan proyek. Kami akan membahas dependensi tersebut di bagian berikut
 
-## Installation
+## Instalasi
 
 Clone atau download dan extract repositori ini. Instal dependensi menggunakan NPM
 
@@ -19,13 +19,13 @@ Clone atau download dan extract repositori ini. Instal dependensi menggunakan NP
 npm install
 ```
 
-Jika semuanya berjalan dengan baik, NPM akan memberi tahu Anda jumlah paket yang telah diinstal. Kemudian Anda dapat mencoba menjalankannya dan berharap semuanya berjalan dengan baik
+Jika semuanya berjalan dengan baik, NPM akan memberi tahu Anda jumlah paket yang telah diinstal. Kemudian Anda dapat mencoba menjalankannya dan berharap semuanya berjalan dengan lancar
 
 ```bash
 npm run dev
 ```
 
-Project akan tersedia untuk dilihat di [http://localhost:3000](http://localhost:3000)
+proyek akan tersedia untuk dilihat di [http://localhost:3000](http://localhost:3000)
 
 ## Note
 
