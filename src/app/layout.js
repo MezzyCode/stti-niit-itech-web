@@ -1,3 +1,4 @@
+import './reset.css';
 import './globals.css';
 import { Nunito_Sans } from 'next/font/google'
 import Navigation from './components/Navigation';
