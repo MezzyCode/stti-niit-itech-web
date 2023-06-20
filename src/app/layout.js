@@ -1,7 +1,7 @@
 import './reset.css';
 import './globals.css';
-import { Nunito_Sans } from 'next/font/google'
-import Navigation from './components/Navigation';
+import { Nunito_Sans } from 'next/font/google';
+import Navbar from '@/components/Navbar';
 
 const nunito_sans = Nunito_Sans({
   subsets: ['latin']
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="id">
       <body className={nunito_sans.className}>
-        <Navigation></Navigation>
+        <Navbar />
         {children}
       </body>
     </html>
