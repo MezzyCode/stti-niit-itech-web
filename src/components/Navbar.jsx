@@ -7,38 +7,35 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Squash as Hamburger } from 'hamburger-react';
 
-const navLinks = [];
 const pages = ['Home', 'Akademik', 'Berita dan Pengumuman', 'Layanan Online', 'Tentang I-Tech'];
-pages.forEach(link => {
+const navLinks = pages.map((link) => {
   const linkName = link;
   let linkHref = '/' + link.replace(/\s+/g, '-').toLowerCase();
+
   if (linkName === 'Home') {
     linkHref = '/';
   }
-  navLinks.push({ name: linkName, href: linkHref })
+  return { name: linkName, href: linkHref };
 });
-console.log(navLinks);
 
-function NavLinks(props) {
+function NavLinks({ visibility, toggle }) {
   const pathName = usePathname();
-  const visibility = props.visibility;
-  const toggle = props.toggle;
 
   return (
-    <ol className='navbar-navlinks' visibility={visibility ? 'true' : null}>
+    <ul className='navbar-navlinks' visibility={visibility ? 'true' : null}>
       {navLinks.map((link) => {
         const isActive = pathName === link.href;
         return (
-          <ul key={link.name}>
+          <li key={link.name}>
             <Link
               href={link.href}
-              onClick={() => toggle(!props.visibility)}
+              onClick={() => toggle(!visibility)}
               className={isActive ? 'active' : null}
             > {link.name} </Link>
-          </ul>
+          </li>
         )
       })}
-    </ol>
+    </ul>
   )
 }
 
@@ -47,8 +44,11 @@ export default function Navbar() {
 
   return (
     <nav className='navbar'>
+      {/* Fix this later */}
       <Link href={'/'} className='navbar-logo'>
-        <Image src='/i-tech-logo.png' alt='Logo STTI I-Tech' fill={true} />
+        <Image src='/i-tech-logo.png' alt='Logo STTI I-Tech' 
+          fill={true}
+        />
       </Link>
 
       <Hamburger label='Buka Navigasi' toggled={isOpen} toggle={setOpen}></Hamburger>
