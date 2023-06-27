@@ -1,4 +1,25 @@
 /* Default Style */
-body {
+:root {
+  --primary-color: hsl(212, 52%, 25%);
+  --secondary-color: hsl(158, 46%, 51%);
+  --accent-color: hsl(302, 30%, 52%);
+  --on-primary : hsl(0, 0%, 100%);
+  --background-color: hsl(0, 0%, 100%);
+}
+
+html {
   font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+  height: 150vh;
+}
+
+h1 {
+  font-weight: 700;
+  color: whitesmoke;
+}
+
+main.container {
+  padding: 2rem;
 }
