@@ -5,10 +5,10 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main >
+    <div >
       <div >
         <p>Berita Dan Pengumuman Page</p>
       </div>
-    </main>
+    </div>
   )
 }

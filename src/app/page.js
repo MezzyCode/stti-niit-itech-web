@@ -1,9 +1,9 @@
 export default function Page() {
   return (
-    <main>
+    <div>
       <div>
         <p>Home Page</p>
       </div>
-    </main>
+    </div>
   )
 }
