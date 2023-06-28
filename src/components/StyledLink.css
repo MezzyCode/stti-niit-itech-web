@@ -1,0 +1,8 @@
+.linkStyle {
+    background-color: var(--primary-color);
+    color: var(--on-primary);
+    padding: 12px 24px;
+    width: 200px;
+    text-align: center;
+    font-weight: 300;
+}

@@ -30,7 +30,7 @@ function NavLinks({ visibility, toggle }) {
             <Link
               href={link.href}
               onClick={() => toggle(!visibility)}
-              className={isActive ? 'active' : null}
+              className={isActive ? 'active' : ''}
             > {link.name} </Link>
           </li>
         )

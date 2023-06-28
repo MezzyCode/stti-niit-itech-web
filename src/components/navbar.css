@@ -1,7 +1,10 @@
 /* Navigation */
 .navbar {
-  height: 50px;
-  padding: 12px 24px;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,12 +26,16 @@
 }
 
 .navbar-navlinks {
-  z-index: 999;
   display: flex;
   gap: 1em;
-  padding: 1rem;
-  color: var(--on-primary);
   backdrop-filter: blur(1rem);
+}
+
+.navbar-navlinks>li>a {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--on-primary);
+  padding: 12px;
 }
 
 .navbar-navlinks .active {
