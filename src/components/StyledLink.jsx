@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import './StyledLink.css'
+import Icon from './Icon';
+import './styled-link.css';
 
 export default function StyledLink({ name, href }) {
-    return (
-      <Link className='linkStyle' href={href ? '/' : ''}>
-        {name}
-      </Link>
-    );
-  }
+  return (
+    <Link className='link-style' href={href ? '/' : ''}>
+      {name} <Icon name={'navigate_next'}/> 
+    </Link>
+  );
+}

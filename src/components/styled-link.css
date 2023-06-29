@@ -1,8 +1,10 @@
-.linkStyle {
+.link-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--primary-color);
     color: var(--on-primary);
     padding: 12px 24px;
     width: 200px;
-    text-align: center;
     font-weight: 300;
 }
