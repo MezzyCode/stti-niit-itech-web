@@ -1,11 +1,18 @@
-import './cards-summary.css';
-import './cards-prodi.css';
-import './cards-generic.css';
+import './cards.css';
 import StyledLink from './StyledLink';
 
+const CardHeader = ({ title, variant = '' }) => {
+    return (
+        <div className={`card-header ${variant}`}>
+            <hr />
+            <h2>{title}</h2>
+            <hr />
+        </div>
+    )
+}
+
 export const SummaryCard = ({ variant = 'left', title, content, link }) => {
-    let summaryCardHeaderClass = 'summaryCardHeader';
-    let summaryCardImageClass = 'summaryCardImage';
+    let summaryCardImageClass = 'summary-card-image';
 
     switch (variant) {
         case 'right':
@@ -17,14 +24,11 @@ export const SummaryCard = ({ variant = 'left', title, content, link }) => {
     }
 
     return (
-        <section className='summaryCard'>
-            <div className={summaryCardHeaderClass}>
-                <h2>{title}</h2>
-                <hr />
-            </div>
+        <section className='summary-card'>
+            <CardHeader variant={variant} title={title} />
             <div className={summaryCardImageClass}>
             </div>
-            <div className='summaryCardContent'>
+            <div className='summary-card-content'>
                 <p>{content}</p>
                 <StyledLink name={'Selengkapnya'} href={link} />
             </div>
@@ -32,24 +36,38 @@ export const SummaryCard = ({ variant = 'left', title, content, link }) => {
     );
 }
 
-export const GenericCard = ({ icon, title, description, link }) => {
+export const GenericCard = ({ icon, title, content, link }) => {
     return (
         <section className='generic-card'>
             {icon}
             <div className='generic-card-content'>
-                <h2>{title}</h2>
-                <p>{description}</p>
+                <CardHeader title={title} />
+                <p>{content}</p>
                 <StyledLink name={'Selengkapnya'} href={link}></StyledLink>
             </div>
         </section>
     )
 }
 
-export const ProdiCard = () => {
+export const ProdiCard = ({ icon, theme, title, content, link }) => {
     return (
-        <section>This is Prodi Card
-
+        <section className='prodi-card'>
+            <div className='prodi-card-content' theme={theme}>
+                <CardHeader title={title} />
+                {icon}
+                <p>{content}</p>
+                <StyledLink name={'Lebih Lanjut'} href={link} />
+            </div>
         </section>
     )
 }
 
+export const InfoCard = ({ type, title, content, link }) => {
+    return (
+        <section type={type}>
+            <CardHeader variant='' title={title} />
+            <p>{content}</p>
+            <StyledLink name={'Selengkapnya'} link={link} />
+        </section>
+    )
+}

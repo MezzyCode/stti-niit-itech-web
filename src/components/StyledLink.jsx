@@ -4,7 +4,7 @@ import './styled-link.css';
 
 export default function StyledLink({ name, href }) {
   return (
-    <Link className='link-style' href={href ? '/' : ''}>
+    <Link className='styled-link' href={href ? '/' : ''}>
       {name} <Icon name={'navigate_next'}/> 
     </Link>
   );
