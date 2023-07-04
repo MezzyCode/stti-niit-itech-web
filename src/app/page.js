@@ -14,6 +14,10 @@ export default function Page() {
         variant='right'
         title={Post[0][2].title}
         content={Post[0][2].content} link={'/'} />
+      <SummaryCard
+        variant='center'
+        title={Post[0][2].title}
+        content={Post[0][2].content} link={'/'} />
       <div className='prodi-cards'>
         <ProdiCard
           icon={<Icon name={'analytics'} />}
@@ -32,16 +36,19 @@ export default function Page() {
         content={Post[0][3].content} link={'/'}
       />
       <h2> Berita dan Pengumuman</h2>
-      {Info.map(item => {
-        return (
-          <InfoCard
-            key={item.id}
-            type={item.type}
-            title={item.title}
-            content={item.content}
-          />
-        )
-      })}
+      <section className='info-page'>
+        {Info.map(item => {
+          return (
+            <InfoCard
+              key={item.id}
+              type={item.type}
+              title={item.title}
+              content={item.content}
+              link={'/'}
+            />
+          )
+        })}
+      </section>
     </article>
   )
 }

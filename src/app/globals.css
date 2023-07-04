@@ -11,6 +11,10 @@ html {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+a {
+  width: 100%;
+}
+
 h1 {
   font-weight: 700;
   font-size: 3rem;
@@ -37,4 +41,8 @@ main.container {
   gap: 3rem;
   width: 100%;
   align-items: center;
+}
+
+.hidden {
+  display: none !important;
 }

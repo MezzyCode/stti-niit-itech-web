@@ -1,0 +1,29 @@
+.footer {
+    display: grid;
+    padding: 1rem;
+    color: var(--on-primary);
+    background-color: var(--primary-color);
+    justify-items: center;
+}
+
+.footer .image {
+    width: 200px;
+    height: 120px;
+    background-color: grey;
+}
+
+@media (min-width: 35rem) {
+    .footer {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .footer>div {
+        border-left: 1px solid var(--on-primary);
+        padding: 0 1rem;
+    }
+
+    .footer>div:first-child {
+        border: none;
+    }
+}

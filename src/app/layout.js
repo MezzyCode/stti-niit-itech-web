@@ -1,8 +1,9 @@
 import './reset.css';
 import './globals.css';
 import { Nunito_Sans } from 'next/font/google';
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
+import Navbar from '@/components/navbar/navbar';
+import Hero from '@/components/hero/hero';
+import Footer from '@/components/footer/footer';
 
 const nunito_sans = Nunito_Sans({
   subsets: ['latin']
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <main className='container'>
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   )
