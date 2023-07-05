@@ -18,9 +18,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="id">
       <body className={nunito_sans.className}>
-        <Navbar />
-        <Hero />
-        <main className='container'>
+        <header>
+          <Navbar />
+          <Hero />
+        </header>
+        <main >
           {children}
         </main>
         <Footer />

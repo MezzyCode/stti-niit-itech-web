@@ -9,7 +9,7 @@ export default function Hero() {
                 fill={true}
             />
             <div className='hero-content'>
-                <h1 className='hero-header'>Selamat Datang di<br />
+                <h1 className='hero-header'>Selamat Datang di
                     Sekolah Tinggi Teknologi Informasi NIIT</h1>
                 <p>#JadilahGenerasiTeknologi</p>
             </div>

@@ -1,11 +1,11 @@
-import { GenericCard, InfoCard, ProdiCard, SummaryCard } from '@/components/Cards';
+import { GenericCard, InfoCard, ProdiCard, SummaryCard } from '@/components/cards/cards';
 import Icon from '@/components/Icon';
 import Post from '@/database/post.json';
 import Info from '@/database/info.json';
 
 export default function Page() {
   return (
-    <article>
+    <section className='container'>
       <SummaryCard
         title={Post[0][1].title}
         content={Post[0][1].content}
@@ -13,7 +13,7 @@ export default function Page() {
       <SummaryCard
         variant='right'
         title={Post[0][2].title}
-        content={Post[0][2].content} link={'/'} />
+        content={Post[0][2].content} link={'/'} image='yes' />
       <SummaryCard
         variant='center'
         title={Post[0][2].title}
@@ -49,6 +49,6 @@ export default function Page() {
           )
         })}
       </section>
-    </article>
+    </section>
   )
 }

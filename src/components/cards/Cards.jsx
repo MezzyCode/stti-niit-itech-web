@@ -1,25 +1,23 @@
 import Link from 'next/link';
 import './cards.css';
-import StyledLink from './StyledLink';
-import { StyledHeader } from './StyledHeader';
+import StyledLink from '../StyledLink';
+import { StyledHeader } from '../StyledHeader';
 
-export const SummaryCard = ({ variant = 'left', title, content, link }) => {
-    let summaryCardImageClass = 'summary-card-image';
-
-    switch (variant) {
-        case 'right':
-            summaryCardImageClass += ' reversed';
-            break;
-
-        default:
-            break;
+export const SummaryCard = ({ title = 'Title', content = 'Content', link = '/', variant = '' }) => {
+    if (variant === 'simple') {
+        return (
+            <section className='simple-summary-card'>
+                <StyledHeader title={title} variant='right' headingLevel={2} />
+                <div className='content'>{content}</div>
+                <StyledLink name={'Selengkapnya'} href={link} />
+            </section>
+        )
     }
 
     return (
         <section className='summary-card'>
-            <StyledHeader variant={variant} title={title} />
-            <div className={summaryCardImageClass}>
-            </div>
+            <StyledHeader title={title} variant={variant} />
+            <div className={`summary-card-image ${variant === 'right' ? 'right' : ''}`} />
             <div className='summary-card-content'>
                 <p>{content}</p>
                 <StyledLink name={'Selengkapnya'} href={link} />
@@ -64,7 +62,6 @@ const generateDate = () => {
     const todayDate = `${year}-${month}-${day}`;
     return todayDate;
 }
-
 
 export const InfoCard = ({ type, title, content, link }) => {
     return (
