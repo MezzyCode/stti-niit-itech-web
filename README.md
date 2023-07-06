@@ -9,43 +9,32 @@ Untuk menjalankan versi proyek Anda sendiri, Anda harus memiliki yang berikut in
 
 ## Dependensi
 
-Sebagian besar dependensi yang terkait dengan proyek ini dikelola oleh NPM, dan akan diinstal secara otomatis saat Anda mencoba menjalankan proyek. Kami akan membahas dependensi tersebut di bagian berikut
+Sebagian besar dependensi yang terkait dengan proyek ini dikelola oleh NPM, dan akan diinstal secara otomatis saat Anda mencoba menjalankan proyek. Kami akan membahas dependensi tersebut di bagian berikut.
 
 ## Instalasi
 
-Clone atau download dan extract repositori ini. Instal dependensi menggunakan NPM
+Clone atau download dan extract repositori ini. Instal dependensi menggunakan NPM.
 
 ```bash
 npm install
 ```
 
-Jika semuanya berjalan dengan baik, NPM akan memberi tahu Anda jumlah paket yang telah diinstal. Kemudian Anda dapat mencoba menjalankannya dan berharap semuanya berjalan dengan lancar
+Jika semuanya berjalan dengan baik, NPM akan memberi tahu Anda jumlah paket yang telah diinstal. Kemudian Anda dapat mencoba menjalankannya dan berharap semuanya berjalan dengan lancar.
 
 ```bash
 npm run dev
 ```
 
-proyek akan tersedia untuk dilihat di [http://localhost:3000](http://localhost:3000)
+proyek akan tersedia untuk dilihat di [http://localhost:3000](http://localhost:3000).
 
-## Note
+## Informasi Tambahan
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Proyek ini menggunakan Next.js 13 dan Sanity. Pastikan Anda memahami cara kerja dan penggunaan kedua teknologi ini sebelum menjalankan proyek.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Next.js
 
-### Learn More
+Next.js adalah framework React yang digunakan untuk membangun aplikasi web. Proyek ini memanfaatkan versi Next.js 13. Pastikan Anda memiliki pengetahuan dasar tentang Next.js dan bagaimana mengembangkan aplikasi menggunakan framework ini. Dokumentasi resmi Next.js dapat ditemukan di [Next.js Documentation](https://nextjs.org/docs).
 
-To learn more about Next.js, take a look at the following resources:
+### Sanity
 
-* [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-* [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-### Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Sanity adalah platform pengelolaan konten yang digunakan dalam proyek ini. Dengan Sanity, Anda dapat mengelola konten dan data yang digunakan dalam website. Pastikan Anda memahami konsep dan cara kerja Sanity sebelum menggunakan proyek ini. Informasi lebih lanjut tentang Sanity dapat ditemukan di [Sanity Documentation](https://www.sanity.io/docs).
