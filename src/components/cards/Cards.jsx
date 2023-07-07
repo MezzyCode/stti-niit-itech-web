@@ -2,6 +2,7 @@ import Link from 'next/link';
 import './cards.css';
 import StyledLink from '../StyledLink';
 import { StyledHeader } from '../StyledHeader';
+import { PortableText } from '@portabletext/react';
 
 export const SummaryCard = ({ title = 'Title', content = 'Content', link = '/', variant = '' }) => {
     if (variant === 'simple') {
@@ -72,7 +73,7 @@ export const InfoCard = ({ type, title, content, link }) => {
                 <StyledHeader variant='' title={title} headingLevel={3} />
                 <span className='date'>{generateDate()}</span>
             </Link>
-            <p>{content}</p>
+            <PortableText  value={content}/>
         </article>
     )
 }

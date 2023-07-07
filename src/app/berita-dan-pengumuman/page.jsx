@@ -1,6 +1,6 @@
 import { StyledHeader } from '@/components/StyledHeader';
+import { getInformasi } from '@/sanity/utils';
 import { InfoCard } from '@/components/cards/cards';
-import Infos from '@/database/info.json';
 
 export const metadata = {
   title: 'ITech: Berita Dan Pengumuman',
@@ -8,13 +8,20 @@ export const metadata = {
 }
 
 export default async function Page() {
+  const informasi = await getInformasi();
+
   return (
     <section >
-      <StyledHeader title="Berita dan Pengumuman" variant="right"/>
+      <StyledHeader title="Berita dan Pengumuman" variant="right" />
       <ul className="info-page">
-        {Infos.map(info => {
-          return <InfoCard key={info.id} type={info.type} title={info.title} content={info.content} link={`/berita-dan-pengumuman/${info.id}`} />
-        })}
+        {informasi.map((item) => (
+          <InfoCard key={item._id}
+            type={item.category}
+            title={item.name}
+            content={item.content}
+            link={item.slug}
+          />
+        ))}
       </ul>
     </section>
   )

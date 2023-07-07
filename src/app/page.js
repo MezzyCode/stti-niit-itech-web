@@ -1,7 +1,6 @@
-import { GenericCard, InfoCard, ProdiCard, SummaryCard } from '@/components/cards/cards';
+import { GenericCard, ProdiCard, SummaryCard } from '@/components/cards/cards';
 import Icon from '@/components/Icon';
 import Post from '@/database/post.json';
-import Info from '@/database/info.json';
 
 export default function Page() {
   return (
@@ -35,20 +34,6 @@ export default function Page() {
         title={Post[0][3].title}
         content={Post[0][3].content} link={'/'}
       />
-      <h2> Berita dan Pengumuman</h2>
-      <section className='info-page'>
-        {Info.map(item => {
-          return (
-            <InfoCard
-              key={item.id}
-              type={item.type}
-              title={item.title}
-              content={item.content}
-              link={'/'}
-            />
-          )
-        })}
-      </section>
     </section>
   )
 }
