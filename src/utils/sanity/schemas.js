@@ -6,7 +6,8 @@ const informasi = {
         {
             name: 'name',
             title: 'Name',
-            type: 'string'
+            type: 'string',
+            validation: Rule => Rule.required().min(10).max(70)
         },
         {
             name: 'category',
@@ -24,7 +25,10 @@ const informasi = {
             name: 'slug',
             title: 'slug',
             type: 'slug',
-            options: { source: 'name' }
+            options: { 
+                source: 'name',
+                maxLength: 30
+            }
         },
         {
             name: 'image',
@@ -38,11 +42,6 @@ const informasi = {
                     type: 'string'
                 }
             ]
-        },
-        {
-            name: 'url',
-            title: 'URL',
-            type: 'url'
         },
         {
             name: 'content',
