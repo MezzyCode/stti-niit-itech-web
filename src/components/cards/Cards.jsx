@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import './cards.css';
 import StyledLink from '../StyledLink';
+import Image from 'next/image';
 import { StyledHeader } from '../StyledHeader';
 import { PortableText } from '@portabletext/react';
 
@@ -54,26 +55,27 @@ export const ProdiCard = ({ icon, theme, title, content, link }) => {
 }
 
 // Temp for InfoCard Testing
-const generateDate = () => {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0');
-    const day = String(today.getDate()).padStart(2, '0');
 
-    const todayDate = `${year}-${month}-${day}`;
-    return todayDate;
-}
+export const InfoCard = ({ props }) => {
+    let date = new Date(props._createdAt);
+    let formattedDate = date.toLocaleString(undefined, { day: '2-digit', month: '2-digit', year: "numeric" });
+    let link = `/post/${props.slug}`;
 
-export const InfoCard = ({ type, title, content, link }) => {
     return (
-        <article className='info-card' type={type}>
-            <span className='type'>{type}</span>
-            <Link href={link}>
-                <div className='image' />
-                <StyledHeader variant='' title={title} headingLevel={3} />
-                <span className='date'>{generateDate()}</span>
+        <li className='info-card' category={props.category}>
+            <span className='category'>{props.category}</span>
+            <Link href={link} className='image'>
+                <Image src={props.image_url} alt={props.image_alt} fill={true} sizes='50vh' object-fit='cover'/>
             </Link>
-            <PortableText  value={content}/>
-        </article>
+            <div className='content-container'>
+                <h3 className='title'>
+                    <Link href={link}>{props.name}</Link>
+                </h3>
+                <span className='date'>{formattedDate}</span>
+                <div className='content'>
+                    <PortableText value={props.content} />
+                </div>
+            </div>
+        </li>
     )
 }

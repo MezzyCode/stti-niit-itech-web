@@ -4,7 +4,6 @@
       "@/*": ["./src/*"],
       "@/database/*": ["./src/database/*"],
       "@/components/*": ["./src/components/*"],
-      "@/sanity/*": ["./src/sanity/*"],
       "@/utils/*": ["./src/utils/*"]
     }
   }
