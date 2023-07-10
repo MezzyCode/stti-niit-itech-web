@@ -25,7 +25,7 @@ const informasi = {
             name: 'slug',
             title: 'slug',
             type: 'slug',
-            options: { 
+            options: {
                 source: 'name',
                 maxLength: 30
             }
@@ -52,6 +52,51 @@ const informasi = {
     ]
 }
 
-const schemas = [informasi];
+const staff = {
+    name: 'staff',
+    title: 'Staff',
+    type: 'document',
+    fields: [
+        {
+            name: 'name',
+            title: 'Nama',
+            type: 'string',
+            validation: Rule => Rule.required().min(5).max(50)
+        },
+        {
+            name: 'category',
+            title: 'Category',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'Dosen', value: 'dosen' },
+                    { title: 'Staff', value: 'staff' }
+                ],
+            },
+            initialValue: 'dosen'
+        },
+        {
+            name: 'role',
+            title: 'Role',
+            type: 'string',
+            validation: Rule => Rule.required().max(30)
+        },
+        {
+            name: 'image',
+            title: 'Image',
+            type: 'image',
+            options: { hotspot: true },
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'Alt',
+                    type: 'string'
+                }
+            ]
+        }
+    ]
+}
+
+const schemas = [informasi, staff];
 
 export default schemas;

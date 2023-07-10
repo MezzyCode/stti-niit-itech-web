@@ -1,5 +1,5 @@
 // Write here to add links
-const pages = ['Home', 'Akademik', 'Berita dan Pengumuman', 'Layanan Online', 'Tentang I-Tech'];
+const pages = ['Home', 'Akademik', 'Informasi', 'Layanan Online', 'Tentang I-Tech'];
 
 const NAVLINKS = pages.map((link) => {
   const linkName = link;

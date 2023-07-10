@@ -16,6 +16,8 @@ export async function getInformasi() {
             "slug": slug.current,
             "image_url": image.asset -> url,
             "image_alt": image.alt,
+            "hotspot_x": image.hotspot.x,
+            "hotspot_y": image.hotspot.y,
             content
           }
         `
