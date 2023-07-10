@@ -1,31 +1,26 @@
-.hero {
+.container {
     width: 100%;
-    aspect-ratio: 16/9;
+    height: 50vh;
     position: relative;
-    object-fit: cover;
     overflow: hidden;
 }
 
-.hero-background {
+.background {
     filter: brightness(0.94);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
-.hero-header {
+.header {
     font-size: clamp(1rem, 1.5vw + 1rem, 3rem);
 }
 
-.hero-content {
+.content {
     z-index: 1;
     padding: 2rem;
-    position: relative;
-    inset: 60% 0% 0 0%;
+    position: absolute;
+    inset: 50% 0% 0% 50%;
     text-align: end;
+    width: 50%;
 }
 
 @media (min-width: 60rem) {

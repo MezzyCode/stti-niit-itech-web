@@ -54,18 +54,21 @@ export const ProdiCard = ({ icon, theme, title, content, link }) => {
     )
 }
 
-// Temp for InfoCard Testing
-
 export const InfoCard = ({ props }) => {
     let date = new Date(props._createdAt);
     let formattedDate = date.toLocaleString(undefined, { day: '2-digit', month: '2-digit', year: "numeric" });
-    let link = `/post/${props.slug}`;
+    let link = `/informasi/${props.slug}`;
 
     return (
         <li className='info-card' category={props.category}>
             <span className='category'>{props.category}</span>
             <Link href={link} className='image'>
-                <Image src={props.image_url} alt={props.image_alt} fill={true} sizes='50vh' object-fit='cover'/>
+                <Image
+                    src={props.image_url}
+                    alt={props.image_alt}
+                    fill={true}
+                    sizes='50vh'
+                    objectPosition={`${props.hotspot_x}px ${props.hotspot_y}px`} />
             </Link>
             <div className='content-container'>
                 <h3 className='title'>

@@ -1,0 +1,16 @@
+.hamburger-react {
+  z-index: 1000;
+  display: none;
+}
+
+@media (max-width: 60rem) {
+  .hamburger-react[aria-expanded='false'] {
+    color: var(--on-primary);
+  }
+
+  .hamburger-react {
+    display: block;
+    color: var(--secondary-color);
+  }
+
+}

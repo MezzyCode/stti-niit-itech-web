@@ -1,16 +1,15 @@
 import Image from 'next/image'
-import './hero.css'
+import styles from './Hero.module.css';
 
 export default function Hero() {
     return (
-        <div className='hero'>
-            <Image className='hero-background'
+        <div className={styles.container}>
+            <Image className={styles.background}
                 src='/hero-banner/1.jpeg' alt='Foto I-Tech'
                 fill={true}
             />
-            <div className='hero-content'>
-                <h1 className='hero-header'>Selamat Datang di
-                    Sekolah Tinggi Teknologi Informasi NIIT</h1>
+            <div className={styles.content}>
+                <h1 className={styles.header}>Selamat Datang di Sekolah Tinggi Teknologi Informasi NIIT</h1>
                 <p>#JadilahGenerasiTeknologi</p>
             </div>
         </div>

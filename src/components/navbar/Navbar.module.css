@@ -1,5 +1,4 @@
-/* Navigation */
-.navbar {
+.container {
   z-index: 999;
   position: fixed;
   top: 0;
@@ -11,40 +10,33 @@
   background-color: var(--primary-color);
 }
 
-.navbar-logo {
-  display: block;
+.logo {
   position: relative;
-  object-fit: contain;
-  width: 170px;
-  height: 30px;
   background-color: var(--background-color);
+  width: fit-content;
+  padding: 10px;
 }
 
-.hamburger-react {
-  z-index: 1000;
-  display: none;
-}
-
-.navbar-navlinks {
+.navlinks {
   display: flex;
   gap: 1em;
   backdrop-filter: blur(1rem);
 }
 
-.navbar-navlinks>li>a {
+.navlinks>li>a {
   display: flex;
   justify-content: flex-end;
   color: var(--on-primary);
   padding: 12px;
 }
 
-.navbar-navlinks .active {
+.navlinks .active {
   color: var(--secondary-color);
 }
 
 /* Navigation Mobile */
 @media (max-width: 60rem) {
-  .navbar-navlinks {
+  .navlinks {
     flex-direction: column;
     position: fixed;
     inset: 0 0 0 40%;
@@ -55,17 +47,7 @@
     transition: transform 350ms ease-in-out;
   }
 
-  .navbar-navlinks[visibility="true"] {
+  .navlinks[visibility="true"] {
     transform: translateX(0%);
   }
-
-  .hamburger-react[aria-expanded='false'] {
-    color: var(--on-primary);
-  }
-
-  .hamburger-react {
-    display: block;
-    color: var(--secondary-color);
-  }
-
 }
