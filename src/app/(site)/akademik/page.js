@@ -1,4 +1,4 @@
-import { SummaryCard } from '@/components/cards/cards'
+import { SummaryCard } from '@/components/cards/Cards'
 
 export const metadata = {
   title: 'I-Tech: Akademik',

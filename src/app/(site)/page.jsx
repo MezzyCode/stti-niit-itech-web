@@ -1,4 +1,4 @@
-import { GenericCard, ProdiCard, SummaryCard } from '@/components/cards/cards';
+import { GenericCard, ProdiCard, SummaryCard } from '@/components/cards/Cards';
 import Icon from '@/components/Icon';
 import Post from '@/database/post.json';
 
