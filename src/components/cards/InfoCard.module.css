@@ -1,0 +1,56 @@
+/* Info Card: Berita dan Pengumuman */
+.info-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  max-width: 350px;
+  position: relative;
+  box-shadow: var(--elevation-2);
+  flex-direction: column;
+}
+
+.category {
+  text-transform: capitalize;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  padding: 0.2rem 1rem;
+  font-weight: 700;
+}
+
+.container[category="berita"]>.category {
+  background: var(--color-secondary);
+}
+
+.container[category="pengumuman"]>.category {
+  background: var(--color-accent);
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.date {
+  font-size: 0.9rem;
+}
+
+.content_text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}

@@ -1,7 +1,7 @@
 :root {
     --box-size: 5rem;
     --box-offset: -3px;
-    --box-color: var(--accent-color);
+    --box-color: var(--color-accent);
 }
 
 /* cards-summary */
@@ -12,11 +12,11 @@
 }
 
 .summary-card>.card-header {
-    color: var(--primary-color);
+    color: var(--color-primary);
 }
 
 .summary-card>.card-header>hr {
-    background: var(--secondary-color);
+    background: var(--color-secondary);
 }
 
 .summary-card-image {
@@ -71,11 +71,11 @@
     gap: 1rem;
     padding: 1rem;
     position: relative;
-    border: 0.2rem solid var(--primary-color);
+    border: 0.2rem solid var(--color-primary);
 
     >.material-icons {
         font-size: 5rem;
-        color: var(--primary-color);
+        color: var(--color-primary);
     }
 }
 
@@ -85,7 +85,7 @@
     gap: 1rem;
 
     >h2 {
-        color: var(--primary-color);
+        color: var(--color-primary);
     }
 }
 
@@ -116,73 +116,15 @@
 }
 
 .prodi-card-content[theme="informatika"] {
-    background-color: var(--secondary-color);
+    background-color: var(--color-secondary);
 }
 
 .prodi-card-content[theme="teknik-informatika"] {
-    background-color: var(--accent-color);
+    background-color: var(--color-accent);
 }
 
 .prodi-card-content .styled-link {
     background-color: black;
-}
-
-
-/* Info Card: Berita dan Pengumuman */
-.info-page {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 2rem;
-    justify-content: center;
-}
-
-.info-card {
-    display: flex;
-    max-width: 350px;
-    position: relative;
-    background-color: gray;
-    flex-direction: column;
-}
-
-.info-card .category {
-    text-transform: capitalize;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    padding: 0.2rem 1rem;
-    font-weight: 700;
-}
-
-.info-card[category="berita"]>.category {
-    background: var(--secondary-color);
-}
-
-.info-card[category="pengumuman"]>.category {
-    background: var(--accent-color);
-}
-
-.info-card .date {
-    font-size: 0.9rem;
-}
-
-.info-card .image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.content-container {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.info-card .content {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
 }
 
 @media (min-width: 60rem) {

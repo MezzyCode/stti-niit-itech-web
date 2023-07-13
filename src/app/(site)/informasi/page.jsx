@@ -1,6 +1,6 @@
 import { StyledHeader } from '@/components/StyledHeader';
 import { getInformasi } from '@/utils/sanity/utils';
-import { InfoCard } from '@/components/cards/Cards';
+import { InfoCard } from '@/components/cards/InfoCard';
 
 export const metadata = {
   title: 'ITech: Informasi',

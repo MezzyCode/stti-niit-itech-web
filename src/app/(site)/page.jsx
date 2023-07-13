@@ -32,8 +32,7 @@ export default function Page() {
       <GenericCard
         icon={<Icon name={'school'} />}
         title={Post[0][3].title}
-        content={Post[0][3].content} link={'/'}
-      />
+        content={Post[0][3].content} link={'/'} />
     </section>
   )
 }
