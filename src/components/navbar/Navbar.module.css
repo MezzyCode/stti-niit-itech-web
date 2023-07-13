@@ -1,18 +1,22 @@
 .container {
-  z-index: 999;
   position: fixed;
+  z-index: 999;
   top: 0;
   width: 100%;
-  padding: 0px 24px;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--primary-color);
+  background-color: var(--surface-2);
+  box-shadow: var(--elevation-1);
+}
+/* Implement Later */
+.transparent {
+  background-color: black;
 }
 
 .logo {
   position: relative;
-  background-color: var(--background-color);
   width: fit-content;
   padding: 10px;
 }
@@ -20,18 +24,24 @@
 .navlinks {
   display: flex;
   gap: 1em;
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(0.2rem);
 }
 
-.navlinks>li>a {
+.navlink {
   display: flex;
   justify-content: flex-end;
-  color: var(--on-primary);
+  color: var(--color-primary);
   padding: 12px;
+  border-radius: 3rem;
 }
 
-.navlinks .active {
-  color: var(--secondary-color);
+.navlink:hover {
+  background-color: var(--surface-5);
+}
+
+.navlink.active {
+  color: var(--surface-2);
+  background-color: var(--color-primary);
 }
 
 /* Navigation Mobile */
@@ -39,15 +49,19 @@
   .navlinks {
     flex-direction: column;
     position: fixed;
-    inset: 0 0 0 40%;
+    inset: 0 0 0 60%;
     padding: 4rem 2rem;
     text-align: end;
-    background-color: hsl(0deg 0% 0% / 77%);
+    background-color: hsl(0deg 0% 0% / 65%);
     transform: translateX(100%);
     transition: transform 350ms ease-in-out;
   }
 
   .navlinks[visibility="true"] {
     transform: translateX(0%);
+  }
+
+  .navlink {
+    color: var(--surface-2);
   }
 }

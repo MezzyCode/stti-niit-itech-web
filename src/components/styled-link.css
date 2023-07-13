@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-color);
-    color: var(--on-primary);
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
     padding: 12px 24px;
     width: 200px;
     font-weight: 300;

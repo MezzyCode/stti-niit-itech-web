@@ -17,12 +17,11 @@ function NavLinks({ visibility, toggle }) {
       {NAVLINKS.map((link) => {
         const isActive = pathName === link.href;
         return (
-          <li
-            key={link.name}>
+          <li key={link.name} >
             <Link
               href={link.href}
               onClick={() => toggle(!visibility)}
-              className={isActive ? styles.active : ''}
+              className={`${styles.navlink} ${isActive ? styles.active : ''}`}
             > {link.name} </Link>
           </li>
         )

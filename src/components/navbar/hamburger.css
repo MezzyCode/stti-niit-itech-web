@@ -5,12 +5,12 @@
 
 @media (max-width: 60rem) {
   .hamburger-react[aria-expanded='false'] {
-    color: var(--on-primary);
+    color: var(--color-primary);
   }
 
   .hamburger-react {
     display: block;
-    color: var(--secondary-color);
+    color: var(--surface-2);
   }
 
 }
