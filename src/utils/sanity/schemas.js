@@ -7,7 +7,7 @@ const informasi = {
             name: 'name',
             title: 'Name',
             type: 'string',
-            validation: Rule => Rule.required().min(10).max(70)
+            validation: Rule => Rule.required().min(1).max(70)
         },
         {
             name: 'category',
@@ -20,6 +20,48 @@ const informasi = {
                 ],
             },
             initialValue: 'berita'
+        },
+        {
+            name: 'slug',
+            title: 'slug',
+            type: 'slug',
+            options: {
+                source: 'name',
+                maxLength: 30
+            }
+        },
+        {
+            name: 'image',
+            title: 'Image',
+            type: 'image',
+            options: { hotspot: true },
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'Alt',
+                    type: 'string'
+                }
+            ]
+        },
+        {
+            name: 'content',
+            title: 'Content',
+            type: 'array',
+            of: [{ type: 'block' }]
+        }
+    ]
+}
+
+const post = {
+    name: 'post',
+    title: 'Post',
+    type: 'document',
+    fields: [
+        {
+            name: 'name',
+            title: 'Name',
+            type: 'string',
+            validation: Rule => Rule.required().min(1).max(50)
         },
         {
             name: 'slug',
@@ -97,6 +139,6 @@ const staff = {
     ]
 }
 
-const schemas = [informasi, staff];
+const schemas = [informasi, post, staff];
 
 export default schemas;

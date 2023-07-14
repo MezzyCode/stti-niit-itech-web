@@ -37,3 +37,19 @@ export async function getInformasiPost(slug) {
         { slug: slug }
     )
 }
+
+export async function getPostByName(name) {
+    return client.fetch(
+        groq`*[_type == "post" && name == $name][0]{
+            _id,
+            _createdAt,
+            name,
+            category,
+            "slug": slug.current,
+            image,
+            content
+          }
+        `,
+        { name: name }
+    )
+}
