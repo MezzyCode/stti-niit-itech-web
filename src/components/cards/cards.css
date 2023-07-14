@@ -4,13 +4,6 @@
     --box-color: var(--color-accent);
 }
 
-/* cards-summary */
-.summary-card {
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 1200px;
-}
-
 .summary-card>.card-header {
     color: var(--color-primary);
 }
