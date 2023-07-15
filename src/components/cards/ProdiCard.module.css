@@ -1,0 +1,37 @@
+/* cards-prodi */
+.container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.item {
+  max-width: 500px;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: black;
+}
+
+.item-content>.material-icons {
+  font-size: 5rem;
+}
+
+.item-content[theme="informatika"] {
+  background-color: var(--color-secondary);
+}
+
+.item-content[theme="teknik-informatika"] {
+  background-color: var(--color-accent);
+}
+
+.item-content .styled-link {
+  background-color: black;
+}

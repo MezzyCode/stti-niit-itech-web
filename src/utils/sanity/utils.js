@@ -43,13 +43,27 @@ export async function getPostByName(name) {
         groq`*[_type == "post" && name == $name][0]{
             _id,
             _createdAt,
-            name,
-            category,
             "slug": slug.current,
+            name,
             image,
             content
           }
         `,
         { name: name }
+    )
+}
+
+export async function getProdi() {
+    return client.fetch(
+        groq`
+        *[_type == "post" && name match "Program Studi:"] {
+          _id,
+          _createdAt,
+          "slug": slug.current,
+          name,
+          image,
+          content
+          }
+        `
     )
 }

@@ -15,15 +15,4 @@ export const GenericCard = ({ icon, title, content, link }) => {
     )
 }
 
-export const ProdiCard = ({ icon, theme, title, content, link }) => {
-    return (
-        <section className='prodi-card'>
-            <div className='prodi-card-content' theme={theme}>
-                <StyledHeader title={title} />
-                {icon}
-                <p>{content}</p>
-                <StyledLink name={'Lebih Lanjut'} href={link} />
-            </div>
-        </section>
-    )
-}
+

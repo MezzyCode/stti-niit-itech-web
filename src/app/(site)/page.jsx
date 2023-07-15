@@ -6,7 +6,6 @@ export default async function Page() {
   return (
     <section >
       <SummaryCard props={await getPostByName('Sambutan Ketua')}/>
-      <SummaryCard props={await getPostByName('Berita terbaru')}/>
     </section>
   )
 }

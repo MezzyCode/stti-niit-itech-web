@@ -1,6 +1,7 @@
 import { StyledHeader } from '@/components/StyledHeader';
 import { getInformasi } from '@/utils/sanity/utils';
 import { InfoCard } from '@/components/cards/InfoCard';
+import { ListContainer } from '@/components/ListContainer';
 
 export const metadata = {
   title: 'ITech: Informasi',
@@ -13,13 +14,13 @@ export default async function Page() {
   return (
     <section >
       <StyledHeader title="Berita dan Pengumuman" variant="right" />
-      <ul className="info-page">
+      <ListContainer>
         {dataInformasi.map((informasi) => (
           <InfoCard key={informasi._id}
             props={informasi}
           />
         ))}
-      </ul>
+      </ListContainer>
     </section>
   )
 }
