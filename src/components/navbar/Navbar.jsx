@@ -2,12 +2,12 @@
 
 import styles from './Navbar.module.css';
 import './hamburger.css';
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Squash as Hamburger } from 'hamburger-react';
 import { NAVLINKS } from '@/utils/pathUtils';
+import Logo from '../Logo';
 
 function NavLinks({ visibility, toggle }) {
   const pathName = usePathname();
@@ -35,10 +35,8 @@ export default function Navbar() {
 
   return (
     <nav className={styles.container}>
-      <Link href={'/'} className={styles.logo}>
-        <Image src='/i-tech-logo.png' alt='Logo STTI I-Tech'
-          width={170} height={30}
-        />
+      <Link href={'/'}>
+        <Logo/>
       </Link>
 
       <Hamburger

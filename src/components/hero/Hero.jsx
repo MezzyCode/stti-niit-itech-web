@@ -22,7 +22,6 @@ export default function Hero() {
             <Image className={styles.background} src='/hero-banner/1.jpeg' alt='Foto I-Tech' fill={true} />
             <div className={styles.content}>
                 <h1 className={styles.header}>{getCurrentLinkName()}</h1>
-                <p>#JadilahGenerasiTeknologi</p>
             </div>
         </div>
     )
