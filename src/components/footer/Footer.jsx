@@ -46,6 +46,10 @@ const Footer = () => {
                         url='https://twitter.com/i/flow/login?redirect_after_login=%2Fstti_itech'
                         fgColor='--color-primary'
                     />
+                    <Sosmed
+                        url='https://linktr.ee/sttiniititech'
+                        fgColor='--color-primary'
+                    />
                 </div>
             </section>
         </footer>

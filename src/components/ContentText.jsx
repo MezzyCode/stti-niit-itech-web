@@ -1,9 +1,9 @@
 import { PortableText } from '@portabletext/react';
 import style from './ContentText.module.css';
 
-const ContentText = ({ value }) => {
+const ContentText = ({ value, limit=false }) => {
   return (
-    <div className={style.container}>
+    <div className={`${style.container} ${limit ? style.limit : ''}`}>
       <PortableText
         value={value}
       />

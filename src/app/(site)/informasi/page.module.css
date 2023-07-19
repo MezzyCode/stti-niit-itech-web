@@ -1,0 +1,32 @@
+.button_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.button {
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 1rem;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+
+.button.semua {
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.button.berita {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);  
+}
+
+.button.pengumuman {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.button:hover {
+  background-color: var(--surface-5);
+}

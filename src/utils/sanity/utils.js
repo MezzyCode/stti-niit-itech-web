@@ -21,7 +21,7 @@ export async function getInformasi() {
     )
 }
 
-export async function getInformasiPost(slug) {
+export async function getInformasiSlug(slug) {
     return client.fetch(
         groq`*[_type == "informasi" && slug.current == $slug][0]{
             _id,

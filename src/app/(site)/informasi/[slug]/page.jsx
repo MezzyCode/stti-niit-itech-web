@@ -1,10 +1,10 @@
 import styles from './style.module.css';
 import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
-import { getInformasiPost } from '@/utils/sanity/utils';
+import { getInformasiSlug } from '@/utils/sanity/utils';
 
 export default async function Page({ params }) {
-  const post = await getInformasiPost(params.slug);
+  const post = await getInformasiSlug(params.slug);
   return (
     <section className={styles.container}>
       <article className={styles.post}>

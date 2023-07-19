@@ -1,6 +1,6 @@
 /* cards-prodi */
 .container {
-  max-width: 600px;
+  width: clamp(200px, 100%, 620px);
   background-color: var(--surface-2);
   box-shadow: var(--elevation-2);
   padding: 1rem;
@@ -9,9 +9,9 @@
   justify-items: center;
 }
 
-.container h2 {
+.header {
   font-weight: 800;
-  color: var(--color-primary);
+  text-align: center;
 }
 
 .container[theme="S1 Sistem Informasi"] {
