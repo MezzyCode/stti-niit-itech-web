@@ -6,9 +6,9 @@ export const client = createClient({
     apiVersion: '2023-07-06'
 });
 
-export async function getInformasi() {
+export async function getInformasi(limit = 40) {
     return client.fetch(
-        groq`*[_type == "informasi"][0...20]{
+        groq`*[_type == "informasi"][0...$limit]{
             _id,
             _createdAt,
             name,
@@ -17,7 +17,8 @@ export async function getInformasi() {
             image,
             content
           }
-        `
+        `,
+        { limit: limit }    
     )
 }
 

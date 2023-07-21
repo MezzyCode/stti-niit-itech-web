@@ -19,7 +19,7 @@ export default function Hero() {
 
     return (
         <div className={styles.container}>
-            <Image className={styles.background} src='/hero-banner/1.jpeg' alt='Foto I-Tech' fill={true} />
+            <Image className={styles.background} src='/hero-banner/1.jpeg' alt='Foto I-Tech' fill={true} priority={'high'}/>
             <div className={styles.content}>
                 <h1 className={styles.header}>{getCurrentLinkName()}</h1>
             </div>

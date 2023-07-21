@@ -5,6 +5,9 @@
   max-width: 75ch;
   text-align: justify;
 }
+.container a {
+  color: var(--color-primary);
+}
 
 .limit {
   display: -webkit-box;

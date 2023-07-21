@@ -1,12 +1,13 @@
 import { ListContainer } from '@/components/ListContainer';
 import { SummaryCard } from '@/components/cards/SummaryCard';
-import { getPostByName } from '@/utils/sanity/utils';
 import { ProdiCard } from '@/components/cards/ProdiCard';
-import { getProdi } from '@/utils/sanity/utils';
+import { getInformasi, getPostByName, getProdi } from '@/utils/sanity/utils';
 import { StyledHeader } from '@/components/StyledHeader';
+import { InfoCard } from '@/components/cards/InfoCard';
 
 export default async function Page() {
   const prodi = await getProdi();
+  const dataInformasiLimited = await getInformasi(4);
 
   return (
     <section >
@@ -19,13 +20,21 @@ export default async function Page() {
         {prodi.map((item) => (
           <ProdiCard key={item._id}
             props={item}
+            limit={true}
           />
         ))}
       </ListContainer>
       <StyledHeader
-        title='Berita Terbaru'
+        title='Informasi Terbaru'
         variant='center'
       />
+      <ListContainer>
+        {dataInformasiLimited.map((informasi) => (
+          <InfoCard key={informasi._id}
+            props={informasi}
+          />
+        ))}
+      </ListContainer>
     </section>
   )
 }
