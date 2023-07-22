@@ -8,12 +8,17 @@ export const SummaryCard = ({ props }) => {
   const imageAlt = props.image ? props.image.alt : 'placeholder image'
 
   return (
-    <section className={style.container}>
-      <img className={style.image} src={image} alt={imageAlt} />
-      <div className={style.context}>
-        <StyledHeader variant='center' title={props.name} />
-        <ContentText value={props.content} />
-      </div>
-    </section>
+    <>
+      <StyledHeader
+        className={style.header}
+        variant='center'
+        title={props.name} />
+      <section className={style.container}>
+        {props.image && <img className={style.image} src={image} alt={imageAlt} />}
+        <div className={style.context}>
+          <ContentText value={props.content} />
+        </div>
+      </section>
+    </>
   );
 }

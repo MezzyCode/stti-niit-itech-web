@@ -52,6 +52,46 @@ const informasi = {
     ]
 }
 
+const layananOnline = {
+    name: 'layananOnline',
+    title: 'Layanan Online',
+    type: 'document',
+    fields: [
+        {
+            name: 'name',
+            title: 'Name',
+            type: 'string',
+            validation: (Rule) => Rule.required().min(1).max(70),
+        },
+        {
+            name: 'icon',
+            title: 'Icon',
+            type: 'string',
+            description: 'Anda dapat menemukan nama-nama icon yang tersedia di situs web Material Icons: https://fonts.google.com/icons.',
+            validation: (Rule) => Rule.required().custom(value => {
+                const convertedValue = value.trim().toLowerCase().replace(/\s+/g, '_');
+                if (convertedValue !== value) {
+                    return `Nama ikon harus ditulis dalam huruf kecil dan menggunakan garis bawah (_). Sebagai contoh: "account_circle" untuk menggunakan icon Account Circle.`;
+                }
+                return true;
+            })
+        },
+        {
+            name: 'content',
+            title: 'Content',
+            type: 'array',
+            of: [{ type: 'block' }],
+        },
+        {
+            name: 'url',
+            title: 'URL',
+            type: 'url',
+            validation: (Rule) =>
+                Rule.required().uri({ allowRelative: false, scheme: ['https', 'http'] }),
+        }
+    ],
+};
+
 const post = {
     name: 'post',
     title: 'Post',
@@ -139,6 +179,6 @@ const staff = {
     ]
 }
 
-const schemas = [informasi, post, staff];
+const schemas = [informasi, layananOnline, post, staff];
 
 export default schemas;

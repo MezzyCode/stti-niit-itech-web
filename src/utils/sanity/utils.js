@@ -68,3 +68,17 @@ export async function getProdi() {
         `
     )
 }
+
+export async function getLayananInformasi() {
+    return client.fetch(
+        groq`*[_type == "layananOnline"]{
+            _id,
+            _createdAt,
+            name,
+            icon,
+            content,
+            url
+          }
+        `,  
+    )
+}
