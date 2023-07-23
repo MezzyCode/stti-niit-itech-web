@@ -7,12 +7,14 @@ export const GenericCard = ({ props }) => {
     return (
         <li className={style.container}>
             <Link href={props.url}>
-                <Icon name={props.icon} className={style.icon} />
+            <Icon name={props.icon} className={style.icon} />
             </Link>
+            <Link href={props.url}>
             <div className={style.content_container}>
                 <strong>{props.name}</strong>
                 <ContentText value={props.content} />
             </div>
+            </Link>
         </li>
     )
 }

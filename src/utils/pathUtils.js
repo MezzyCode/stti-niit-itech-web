@@ -11,4 +11,10 @@ const NAVLINKS = pages.map((link) => {
   return { name: linkName, href: linkHref };
 });
 
+export function getBaseLink(pathname, nestingDepth) {
+  const parts = pathname.split('/'); // Split the pathname by slashes
+  const baseLink = parts.slice(0, nestingDepth).join('/'); // Join the specified number of parts back together
+  return baseLink;
+}
+
 export {NAVLINKS};

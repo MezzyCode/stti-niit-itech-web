@@ -9,17 +9,26 @@ export default function Hero() {
     const pathName = usePathname();
 
     const getCurrentLinkName = () => {
-        const currentLink = NAVLINKS.find((link) => link.href === pathName);
-        if (currentLink.href === '/') {
-            return 'Selamat Datang di Sekolah Tinggi Teknologi Informasi NIIT'
-        }
+        const currentLink = NAVLINKS.find((link) => {
+            if (!link.href === pathName) {
+                return 'Jadilah Generasi Teknlogi'
+            }
 
-        return currentLink ? currentLink.name : '';
+            if (link.href === pathName) {
+                return link.name
+            }
+
+            if (link.href === '/') {
+                return 'Selamat Datang di Sekolah Tinggi Teknologi Informasi NIIT'
+            }
+        });
+
+        return currentLink ? currentLink.name : '#JadilahGenerasiTeknologi';
     };
 
     return (
         <div className={styles.container}>
-            <Image className={styles.background} src='/hero-banner/1.jpeg' alt='Foto I-Tech' fill={true} priority={'high'}/>
+            <Image className={styles.background} src='/hero-banner/1.jpeg' alt='Foto I-Tech' fill={true} priority={'high'} />
             <div className={styles.content}>
                 <h1 className={styles.header}>{getCurrentLinkName()}</h1>
             </div>

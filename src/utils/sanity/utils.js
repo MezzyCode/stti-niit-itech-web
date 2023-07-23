@@ -18,7 +18,7 @@ export async function getInformasi(limit = 40) {
             content
           }
         `,
-        { limit: limit }    
+        { limit: limit }
     )
 }
 
@@ -30,8 +30,7 @@ export async function getInformasiSlug(slug) {
             name,
             category,
             "slug": slug.current,
-            "image_url": image.asset -> url,
-            "image_alt": image.alt,
+            image,
             content
           }
         `,
@@ -79,6 +78,21 @@ export async function getLayananInformasi() {
             content,
             url
           }
-        `,  
+        `,
+    )
+}
+
+export async function getStaff() {
+    return client.fetch(
+        groq`*[_type == "staff"]{
+            _id,
+            _createdAt,
+            name,
+            category,
+            role,
+            image,
+            content
+          }
+        `,
     )
 }
