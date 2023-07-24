@@ -9,22 +9,16 @@ export default function Hero() {
     const pathName = usePathname();
 
     const getCurrentLinkName = () => {
-        const currentLink = NAVLINKS.find((link) => {
-            if (!link.href === pathName) {
-                return 'Jadilah Generasi Teknlogi'
-            }
+        const currentLink = NAVLINKS.find((link) => link.href === pathName);
+        const defaultWelcome = 'Selamat Datang di Sekolah Tinggi Teknologi Informasi NIIT';
 
-            if (link.href === pathName) {
-                return link.name
-            }
+        if (currentLink?.name === 'Home') {
+            return defaultWelcome;
+        }
 
-            if (link.href === '/') {
-                return 'Selamat Datang di Sekolah Tinggi Teknologi Informasi NIIT'
-            }
-        });
-
-        return currentLink ? currentLink.name : '#JadilahGenerasiTeknologi';
+        return currentLink?.name || defaultWelcome;
     };
+
 
     return (
         <div className={styles.container}>

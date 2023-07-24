@@ -28,12 +28,10 @@ export default async function Page() {
       <SummaryCard
         id='verifikasi-ijazah'
         props={await getPostByName('Verifikasi Ijazah')} />
-      <StyledHeader
+      <SummaryCard
         id='staff'
-        title='Dosen dan Pengajar Profesional'
-        variant='center'
+        props={await getPostByName('Dosen dan Pengajar Profesional')}
       />
-      <p>Dosen kami adalah pengajar profesional lulusan dalam dan luar negeri dengan latar belakang keahlian yang mendukung pendidikan di Program Studi.</p>
       <ListContainer>
         {staff.map((item) => (
           <DosenCard key={item._id} props={item} />

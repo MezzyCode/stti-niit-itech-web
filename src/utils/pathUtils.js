@@ -5,11 +5,11 @@ const NAVLINKS = pages.map((link) => {
   const linkName = link;
   let linkHref = '/' + link.replace(/\s+/g, '-').toLowerCase();
 
-  if (linkName === 'Home') {
-    linkHref = '/';
-  }
-  return { name: linkName, href: linkHref };
+  linkHref = linkName === 'Home' ? '/' : linkHref;
+
+  return { name: linkName, href: linkHref }
 });
+
 
 export function getBaseLink(pathname, nestingDepth) {
   const parts = pathname.split('/'); // Split the pathname by slashes

@@ -10,10 +10,7 @@
 }
 
 .image {
-  display: grid;
-  grid-gap: 1rem;
-  gap: 1rem;
-  justify-items: center;
+  max-height: 80vh;
 }
 
 .aside {
