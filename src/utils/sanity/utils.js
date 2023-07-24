@@ -6,9 +6,11 @@ export const client = createClient({
     apiVersion: '2023-07-06'
 });
 
-export async function getInformasi(limit = 40) {
+export async function getInformasi(limit = 40, category = '') {
+    const categoryFilter = category ? ` && category == $category` : '';
+
     return client.fetch(
-        groq`*[_type == "informasi"][0...$limit]{
+        groq`*[_type == "informasi"${categoryFilter}] | order(_createdAt desc) [0...$limit] {
             _id,
             _createdAt,
             name,
@@ -16,11 +18,14 @@ export async function getInformasi(limit = 40) {
             "slug": slug.current,
             image,
             content
-          }
-        `,
-        { limit: limit }
-    )
+          }`,
+        {
+            limit: limit,
+            category: category
+        }
+    );
 }
+
 
 export async function getInformasiSlug(slug) {
     return client.fetch(

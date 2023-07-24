@@ -7,7 +7,7 @@ import { InfoCard } from '@/components/cards/InfoCard';
 
 export default async function Page({ params }) {
   const post = await getInformasiSlug(params.slug);
-  const dataInformasiLimited = await getInformasi(4);
+  const dataInformasiLimited = await getInformasi(4, post.category);
 
   const image = post.image ? sanityLoader(post.image).url() : '/hero-banner/1.jpeg'
   const imageAlt = post.image ? post.image.alt : 'placeholder image'
