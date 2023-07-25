@@ -17,8 +17,7 @@ export async function getInformasi(limit = 40, category = '') {
             category,
             "slug": slug.current,
             image,
-            content
-          }`,
+            content}`,
         {
             limit: limit,
             category: category
@@ -43,18 +42,17 @@ export async function getInformasiSlug(slug) {
     )
 }
 
-export async function getPostByName(name) {
+export async function getPostBySlug(slug) {
     return client.fetch(
-        groq`*[_type == "post" && name == $name][0]{
+        groq`*[_type == "post" && slug.current == $slug][0]{
             _id,
             _createdAt,
             "slug": slug.current,
             name,
             image,
-            content
-          }
+            content}
         `,
-        { name: name }
+        { slug: slug }
     )
 }
 

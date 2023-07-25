@@ -1,7 +1,7 @@
 import { ListContainer } from "@/components/ListContainer"
 import { GenericCard } from "@/components/cards/GenericCard";
 import { SummaryCard } from "@/components/cards/SummaryCard"
-import { getLayananInformasi, getPostByName } from "@/utils/sanity/utils"
+import { getLayananInformasi, getPostBySlug } from "@/utils/sanity/utils"
 
 export const metadata = {
   title: 'ITech: Layanan Online',
@@ -14,7 +14,7 @@ export default async function Page() {
   return (
     <section >
       <SummaryCard
-        props={await getPostByName('Layanan Online')}
+        props={await getPostBySlug('layanan-online')}
       />
       <ListContainer>
         {layananOnline.map((item) => (

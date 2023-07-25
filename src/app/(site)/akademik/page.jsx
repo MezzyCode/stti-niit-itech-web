@@ -3,7 +3,7 @@ import { StyledHeader } from "@/components/StyledHeader";
 import { DosenCard } from "@/components/cards/DosenCard";
 import { ProdiCard } from "@/components/cards/ProdiCard";
 import { SummaryCard } from "@/components/cards/SummaryCard";
-import { getPostByName, getProdi, getStaff } from "@/utils/sanity/utils"
+import { getPostBySlug, getProdi, getStaff } from "@/utils/sanity/utils"
 
 export const metadata = {
   title: 'ITech: Akademik',
@@ -26,11 +26,9 @@ export default async function Page() {
         ))}
       </ListContainer>
       <SummaryCard
-        id='verifikasi-ijazah'
-        props={await getPostByName('Verifikasi Ijazah')} />
+        props={await getPostBySlug('verifikasi-ijazah')} />
       <SummaryCard
-        id='staff'
-        props={await getPostByName('Dosen dan Pengajar Profesional')}
+        props={await getPostBySlug('staff')}
       />
       <ListContainer>
         {staff.map((item) => (

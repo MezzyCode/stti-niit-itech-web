@@ -1,7 +1,7 @@
 import { ListContainer } from '@/components/ListContainer';
 import { SummaryCard } from '@/components/cards/SummaryCard';
 import { ProdiCard } from '@/components/cards/ProdiCard';
-import { getInformasi, getPostByName, getProdi } from '@/utils/sanity/utils';
+import { getInformasi, getPostBySlug, getProdi } from '@/utils/sanity/utils';
 import { StyledHeader } from '@/components/StyledHeader';
 import { InfoCard } from '@/components/cards/InfoCard';
 
@@ -11,7 +11,7 @@ export default async function Page() {
 
   return (
     <section >
-      <SummaryCard props={await getPostByName('Sambutan Ketua')} />
+      <SummaryCard props={await getPostBySlug('sambutan-ketua')} />
       <StyledHeader
         title='Program Studi'
         variant='center'

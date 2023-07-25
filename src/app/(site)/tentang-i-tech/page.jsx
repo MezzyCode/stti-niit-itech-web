@@ -1,5 +1,5 @@
 import { SummaryCard } from '@/components/cards/SummaryCard';
-import { getPostByName } from '@/utils/sanity/utils';
+import { getPostBySlug } from '@/utils/sanity/utils';
 
 export const metadata = {
   title: 'I-Tech: Tentang I-Tech',
@@ -9,9 +9,9 @@ export const metadata = {
 export default async function Page() {
   return (
     <section >
-      <SummaryCard props={await getPostByName('Sejarah STTI NIIT')} />
-      <SummaryCard props={await getPostByName('Visi & Misi')} />
-      <SummaryCard props={await getPostByName('Struktur Organisasi')} />
+      <SummaryCard props={await getPostBySlug('sejarah-stti-niit')} />
+      <SummaryCard props={await getPostBySlug('visi-and-misi')} />
+      <SummaryCard props={await getPostBySlug('struktur-organisasi')} />
     </section>
   )
 }

@@ -14,7 +14,7 @@ export default async function Page() {
 
   return (
     <section >
-      <StyledHeader title="Berita dan Pengumuman" variant="right" />
+      <StyledHeader title="Informasi" variant="right" />
       {/* <div className={style.button_container}>
         <button className={`${style.button} ${style.semua}`}>Semua</button>
         <button className={`${style.button} ${style.berita}`}>Berita</button>

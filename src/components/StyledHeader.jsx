@@ -1,4 +1,4 @@
-import './styled-header.css'
+import styles from './StyledHeader.module.css';
 
 export const StyledHeader = ({ title = 'Styled Header', variant = '', headingLevel = 2 }) => {
     const leftHr = (variant === 'left' || variant === 'center') ? true : false;
@@ -6,9 +6,9 @@ export const StyledHeader = ({ title = 'Styled Header', variant = '', headingLev
 
     const Heading = `h${headingLevel}`;
     return (
-        <div className='styled-header'>
+        <div className={styles.container}>
             {leftHr ? <hr /> : ''}
-            <Heading>{title}</Heading>
+            <Heading className={styles.header}>{title}</Heading>
             {rightHr ? <hr /> : ''}
         </div>
     );
