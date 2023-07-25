@@ -24,12 +24,18 @@
   backdrop-filter: blur(0.2rem);
 }
 
-.navlink {
+.navlinks>li {
   display: flex;
   justify-content: flex-end;
+}
+
+.navlink {
+  display: flex;
   color: var(--color-primary);
   padding: 12px;
-  border-radius: 3rem;
+  border-radius: 25px;
+  width: fit-content;
+  text-align: end;
 }
 
 .navlink:hover {
@@ -46,9 +52,8 @@
   .navlinks {
     flex-direction: column;
     position: fixed;
-    inset: 0 0 0 60%;
+    inset: 0 0 0 40%;
     padding: 4rem 2rem;
-    text-align: end;
     background-color: hsl(0deg 0% 0% / 65%);
     transform: translateX(100%);
     transition: transform 350ms ease-in-out;

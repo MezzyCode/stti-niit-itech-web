@@ -11,20 +11,20 @@ export const InfoCard = ({ props }) => {
   let imageAlt = props.image ? props.image.alt : 'placeholder image'
 
   return (
-      <li className={style.container} category={props.category}>
-          <span className={style.category}>{props.category}</span>
-          <Link href={link} >
-              <img src={image} alt={imageAlt} className={style.image}/>
-          </Link>
-          <div className={style.content}>
-              <h3 className='title'>
-                  <Link href={link}>{props.name}</Link>
-              </h3>
-              <span className={style.date}>{formattedDate}</span>
-              <div className={style.content_text}>
-                  <PortableText value={props.content} />
-              </div>
-          </div>
-      </li>
+    <li className={style.container} category={props.category}>
+      <span className={style.category}>{props.category}</span>
+      <Link href={link} >
+        <img src={image} alt={imageAlt} className={style.image} />
+      </Link>
+      <div className={style.content}>
+        <h3 className='title'>
+          <Link href={link}>{props.name}</Link>
+        </h3>
+        <span className={style.date}>{formattedDate}</span>
+        <div className={style.content_text}>
+          <PortableText value={props.content} />
+        </div>
+      </div>
+    </li>
   )
 }

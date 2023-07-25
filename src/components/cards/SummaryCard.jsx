@@ -8,7 +8,7 @@ export const SummaryCard = ({ props }) => {
   const imageAlt = props.image ? props.image.alt : 'placeholder image'
 
   return (
-    <div id={props.slug}>
+    <div id={props.slug} className={style.card_container} >
       <StyledHeader
         className={style.header}
         variant='center'

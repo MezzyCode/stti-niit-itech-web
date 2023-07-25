@@ -21,7 +21,7 @@ function NavLinks({ visibility, toggle }) {
             <Link
               href={link.href}
               onClick={() => toggle(!visibility)}
-              className={`${styles.navlink} ${isActive ? styles.active : ''}`}
+              className={`${styles.navlink} ${isActive && styles.active}`}
             > {link.name} </Link>
           </li>
         )
