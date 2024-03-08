@@ -1,40 +1,40 @@
-# Dokumentasi Website STTI NIIT I-Tech
+# STTI NIIT I-Tech Website Documentation
 
-## Prasyarat
+## Prerequisites
 
-Untuk menjalankan versi proyek Anda sendiri, Anda harus memiliki yang berikut ini di komputer Anda:
+To run your own project version, you need the following on your computer:
 
-* [Node.js](https://nodejs.org/en) untuk menjalankan proyek
-* [NPM](https://docs.npmjs.com/getting-started) untuk mengontrol dependensi proyek, biasanya dipasang satu paket dengan Node.js
+* [Node.js](https://nodejs.org/en) to execute the project
+* [NPM](https://docs.npmjs.com/getting-started) to control project dependencies, usually bundled with Node.js
 
-## Dependensi
+## Dependencies
 
-Sebagian besar dependensi yang terkait dengan proyek ini dikelola oleh NPM, dan akan diinstal secara otomatis saat Anda mencoba menjalankan proyek. Kami akan membahas dependensi tersebut di bagian berikut.
+Most project-related dependencies are managed by NPM and will be installed automatically when you attempt to run the project. We will discuss these dependencies in the following section.
 
-## Instalasi
+## Installation
 
-Clone atau download dan extract repositori ini. Instal dependensi menggunakan NPM.
+Clone or download and extract this repository. Install dependencies using NPM.
 
 ```bash
 npm install
 ```
 
-Jika semuanya berjalan dengan baik, NPM akan memberi tahu Anda jumlah paket yang telah diinstal. Kemudian Anda dapat mencoba menjalankannya dan berharap semuanya berjalan dengan lancar.
+If everything runs smoothly, NPM will inform you of the number of packages installed. Then you can try to run it and hope everything goes smoothly.
 
 ```bash
 npm run dev
 ```
 
-proyek akan tersedia untuk dilihat di [http://localhost:3000](http://localhost:3000).
+The project will be available for viewing at [http://localhost:3000](http://localhost:3000).
 
-## Informasi Tambahan
+## Additional Information
 
-Proyek ini menggunakan Next.js 13 dan Sanity. Pastikan Anda memahami cara kerja dan penggunaan kedua teknologi ini sebelum menjalankan proyek.
+This project uses Next.js 13 and Sanity. Make sure you understand how both technologies work and their usage before running the project.
 
 ### Next.js
 
-Next.js adalah framework React yang digunakan untuk membangun aplikasi web. Proyek ini memanfaatkan versi Next.js 13. Pastikan Anda memiliki pengetahuan dasar tentang Next.js dan bagaimana mengembangkan aplikasi menggunakan framework ini. Dokumentasi resmi Next.js dapat ditemukan di [Next.js Documentation](https://nextjs.org/docs).
+Next.js is a React framework used for building web applications. This project utilizes Next.js version 13. Ensure you have a basic understanding of Next.js and how to develop applications using this framework. The official Next.js documentation can be found at [Next.js Documentation](https://nextjs.org/docs).
 
 ### Sanity
 
-Sanity adalah platform pengelolaan konten yang digunakan dalam proyek ini. Dengan Sanity, Anda dapat mengelola konten dan data yang digunakan dalam website. Pastikan Anda memahami konsep dan cara kerja Sanity sebelum menggunakan proyek ini. Informasi lebih lanjut tentang Sanity dapat ditemukan di [Sanity Documentation](https://www.sanity.io/docs).
+Sanity is a content management platform used in this project. With Sanity, you can manage the content and data used on the website. Make sure you understand the concepts and workings of Sanity before using this project. Further information about Sanity can be found in the [Sanity Documentation](https://www.sanity.io/docs).
